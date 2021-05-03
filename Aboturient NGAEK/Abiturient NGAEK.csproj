@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB8AE829-D171-40C6-AB14-F1E1A0ECB1DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Aboturient_NGAEK</RootNamespace>
+    <AssemblyName>Aboturient NGAEK</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ngaek.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.XmlTransform, Version=3.0.0.34420, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Xdt.3.0.0\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Client, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Client.4.2.0\lib\net45\NuGet.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Common, Version=5.0.0.6, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Common.5.0.0\lib\netstandard2.0\NuGet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Configuration, Version=5.0.0.6, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Configuration.5.0.0\lib\netstandard2.0\NuGet.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.ContentModel, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.ContentModel.4.2.0\lib\net45\NuGet.ContentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.14.0.832, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Core.2.14.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks, Version=5.0.0.6, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Frameworks.5.0.0\lib\net40\NuGet.Frameworks.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Packaging, Version=5.0.0.6, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Packaging.5.0.0\lib\netstandard2.0\NuGet.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Packaging.Core, Version=5.0.0.6, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Packaging.Core.5.0.0\lib\netstandard2.0\NuGet.Packaging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Packaging.Core.Types, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Packaging.Core.Types.4.2.0\lib\net45\NuGet.Packaging.Core.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Repositories, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Repositories.4.2.0\lib\net45\NuGet.Repositories.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.RuntimeModel, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.RuntimeModel.4.2.0\lib\net45\NuGet.RuntimeModel.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Versioning, Version=5.0.0.6, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Versioning.5.0.0\lib\netstandard2.0\NuGet.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.Process, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Process.4.3.0\lib\net461\System.Diagnostics.Process.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.4.5.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Thread.4.3.0\lib\net46\System.Threading.Thread.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllUsers.Designer.cs">
+      <DependentUpon>AllUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectWithRazrab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectWithRazrab.Designer.cs">
+      <DependentUpon>ConnectWithRazrab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlForm.Designer.cs">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormLichnInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormLichnInfo.Designer.cs">
+      <DependentUpon>UpdateFormLichnInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormObuch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormObuch.Designer.cs">
+      <DependentUpon>UpdateFormObuch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormOtdel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormOtdel.Designer.cs">
+      <DependentUpon>UpdateFormOtdel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormOtmZachisl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormOtmZachisl.Designer.cs">
+      <DependentUpon>UpdateFormOtmZachisl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormPassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormPassport.Designer.cs">
+      <DependentUpon>UpdateFormPassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormPlan.Designer.cs">
+      <DependentUpon>UpdateFormPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormSpec.Designer.cs">
+      <DependentUpon>UpdateFormSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormZhurnal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormZhurnal.Designer.cs">
+      <DependentUpon>UpdateFormZhurnal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertPassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertPassport.Designer.cs">
+      <DependentUpon>InsertPassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertLichnInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertLichnInfo.Designer.cs">
+      <DependentUpon>InsertLichnInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertOtdel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertOtdel.Designer.cs">
+      <DependentUpon>InsertOtdel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertPlan.Designer.cs">
+      <DependentUpon>InsertPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertSpec.Designer.cs">
+      <DependentUpon>InsertSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertZhurnal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertZhurnal.Designer.cs">
+      <DependentUpon>InsertZhurnal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertOtmZachisl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertOtmZachisl.Designer.cs">
+      <DependentUpon>InsertOtmZachisl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertFObuch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForInsert\InsertFObuch.Designer.cs">
+      <DependentUpon>InsertFObuch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAvtorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAvtorization.Designer.cs">
+      <DependentUpon>MAvtorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MConnectDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MConnectDB.Designer.cs">
+      <DependentUpon>MConnectDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammInfoBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgrammInfoBox.Designer.cs">
+      <DependentUpon>ProgrammInfoBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationUser.Designer.cs">
+      <DependentUpon>RegistrationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForUpdate\UpdateFormRegistration.Designer.cs">
+      <DependentUpon>UpdateFormRegistration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllUsers.resx">
+      <DependentUpon>AllUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectWithRazrab.resx">
+      <DependentUpon>ConnectWithRazrab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlForm.resx">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormLichnInfo.resx">
+      <DependentUpon>UpdateFormLichnInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormObuch.resx">
+      <DependentUpon>UpdateFormObuch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormOtdel.resx">
+      <DependentUpon>UpdateFormOtdel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormOtmZachisl.resx">
+      <DependentUpon>UpdateFormOtmZachisl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormPassport.resx">
+      <DependentUpon>UpdateFormPassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormPlan.resx">
+      <DependentUpon>UpdateFormPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormSpec.resx">
+      <DependentUpon>UpdateFormSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormZhurnal.resx">
+      <DependentUpon>UpdateFormZhurnal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertPassport.resx">
+      <DependentUpon>InsertPassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertFObuch.resx">
+      <DependentUpon>InsertFObuch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertLichnInfo.resx">
+      <DependentUpon>InsertLichnInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertOtdel.resx">
+      <DependentUpon>InsertOtdel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertOtmZachisl.resx">
+      <DependentUpon>InsertOtmZachisl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertPlan.resx">
+      <DependentUpon>InsertPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertSpec.resx">
+      <DependentUpon>InsertSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForInsert\InsertZhurnal.resx">
+      <DependentUpon>InsertZhurnal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAvtorization.resx">
+      <DependentUpon>MAvtorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MConnectDB.resx">
+      <DependentUpon>MConnectDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammInfoBox.resx">
+      <DependentUpon>ProgrammInfoBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistrationUser.resx">
+      <DependentUpon>RegistrationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForUpdate\UpdateFormRegistration.resx">
+      <DependentUpon>UpdateFormRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vds-сервер.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-6x60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier-24271__480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rodentia-icons_view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <Content Include="ngaek.ico" />
+    <None Include="Resources\MS_word_w1.png" />
+    <None Include="Resources\редактирование.png" />
+    <None Include="Resources\БД.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
